@@ -153,13 +153,13 @@ class Gazebo_Linefollow_Env(gazebo_env.GazeboEnv):
         # Set the rewards for your action
         if not done:
             if action == 0:  # FORWARD
-                reward = 4
+                reward = 8
             elif action == 1:  # LEFT
-                reward = 2
+                reward = 4
             else:
                 reward = 2  # RIGHT
         else:
-            reward = -200000
+            reward = -200
 
         return state, reward, done, {}
 
